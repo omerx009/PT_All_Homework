@@ -1,0 +1,22 @@
+B = [0] * 5
+a = 0
+say = 0
+toplam = 0
+
+for al in B:
+    print(f"{a + 1}. Elemanı Gir: ", end="")
+    B[a] = int(input())
+
+    if B[a] % 10 == 0:
+        say += 1
+        toplam += B[a]  # Sadece son rakamı sıfır olan sayıların toplamını hesapla
+
+    a += 1
+
+ortalama = toplam / say if say > 0 else 0  # Sıfır bölme hatasını engellemek için kontrol
+
+print("Son Rakamı Sıfır Olan Sayı Adedi:", say)
+print("Son Rakamı Sıfır Olan Sayıların Toplamı:", toplam)
+print("Son Rakamı Sıfır Olan Sayıların Ortalaması:", ortalama)
+
+input("Devam etmek için bir tuşa basın . . . ")
