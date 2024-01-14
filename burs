@@ -1,10 +1,30 @@
-a = [150, 600, 700, 450, 850, 275, 950, 1500, 210, 368]
+using System;
 
-for burs in a:
-    if burs < 500:
-        yeni_burs = burs * 1.1 + 50
-        print(yeni_burs)
-    else:
-        print(burs)
+namespace or096
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            double[] a = { 150, 600, 700, 450, 850, 275, 950, 1500, 210, 368 };
 
-input("DEVAM ETMEK İÇİN BİR TUŞA BASINIZ. . . ")
+            foreach (double d in a)
+            {
+                if (d >= 500)
+                {
+                    // Burs miktarı 500 ve üzeri olanlara artış yapılmıyor!
+                    Console.WriteLine(d);
+                    continue; // Döngünün aşağıdaki satırları çalışmadan yeni çevrime gider!
+                }
+
+                d = (d * 0.1) + d;
+                d = d + 50;
+
+                Console.WriteLine(d);
+            }
+
+            Console.Write("DEVAM ETMEK İÇİN BİR TUŞA BASINIZ. . . ");
+            Console.ReadKey(true);
+        }
+    }
+}
