@@ -1,0 +1,13 @@
+s = input("Bir cümle giriniz: ")
+ys = ""
+
+for char in s:
+    c = ord(char)
+
+    if 65 <= c <= 90:  # büyük harf ise
+        ys += chr(c + 32)  # ASCII kodu tekrar karaktere dönüştürülüyor!
+    else:
+        ys += char
+
+print(ys)
+input("\n\nPress any key to continue . . . ")
