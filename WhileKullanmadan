@@ -1,0 +1,64 @@
+using System;
+
+namespace or091
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            int a = 0;
+
+            LoopStart:
+
+            if (a >= 10)
+                goto LoopEnd;
+
+            a++;
+            Console.WriteLine(a);
+
+            goto LoopStart;
+
+            LoopEnd:
+
+            Console.WriteLine("Döngü Dışı...");
+            Console.Write("DEVAM ETMEK İÇİN BİR TUŞA BASINIZ. . . ");
+            Console.ReadKey(true);
+        }
+    }
+}
+
+
+using System;
+
+namespace or092
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            int a = 0, b = 0, toplam = 0;
+
+            LoopStart:
+
+            if (b != 0)
+                goto LoopEnd;
+
+            a++;
+            toplam = toplam + a;
+
+            if (a == 10)
+            {
+                b = 2;
+            }
+
+            goto LoopStart;
+
+            LoopEnd:
+
+            Console.WriteLine("Toplam = " + toplam);
+            Console.Write("DEVAM ETMEK İÇİN BİR TUŞA BASINIZ. . . ");
+            Console.ReadKey(true);
+        }
+    }
+}
+
