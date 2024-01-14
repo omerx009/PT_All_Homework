@@ -1,0 +1,7 @@
+import random
+iller = ["Muş","Ağrı","Bolu","Mersin","Ankara","Sivas","Kayseri"]
+isimler = ["Asuman","İclal","Emin","Bekir","Ahmet","Can","Esma"]
+random.shuffle(iller)
+random.shuffle(isimler)
+for il, isim in zip(iller, isimler):
+    print(f"{il}={isim}")
