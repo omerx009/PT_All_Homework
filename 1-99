@@ -1,0 +1,21 @@
+a = 0
+s = " "
+Birler = ["Bir", "İki", "Üç", "Dört", "Beş", "Altı", "Yedi", "Sekiz", "Dokuz"]
+Onlar = ["On", "Yirmi", "Otuz", "Kırk", "Elli", "Altmış", "Yetmiş", "Seksen", "Doksan"]
+
+try:
+    a = int(input("Bir Sayı Giriniz: "))
+    if 1 <= a <= 99:
+        if a // 10 >= 1:
+            s = Onlar[(a // 10) - 1]
+
+        if a % 10 != 0:
+            s = s + Birler[(a % 10) - 1]
+
+        print(s)
+    else:
+        print("Uygun değer girmediniz.")
+except ValueError:
+    print("Uygun değer girmediniz.")
+
+input("Devam etmek için bir tuşa basın...")
