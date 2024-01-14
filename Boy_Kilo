@@ -1,0 +1,29 @@
+def main():
+    cinsiyet = input("Cinsiyeti girin (K/Kadın veya E/Erkek): ").upper()
+
+    boy_cm = float(input("\n\nBoy (cm) girin: "))
+    kilo = float(input("\n\nKilo (kg) girin: "))
+
+    ideal_kilo = hesapla_ideal_kilo(cinsiyet, boy_cm)
+
+    print(f"\n\nİdeal kilo: {ideal_kilo} kg")
+
+    if kilo < ideal_kilo:
+        print("Şu anda ideal kilonuzun altındasınız.")
+    elif kilo > ideal_kilo:
+        print("Şu anda ideal kilonuzun üstündesiniz.")
+    else:
+        print("Şu anda ideal kilodasınız.")
+
+if __name__ == "__main__":
+    main()
+
+def hesapla_ideal_kilo(cinsiyet, boy_cm):
+    ideal_kilo = 0
+
+    if cinsiyet == 'K':
+        ideal_kilo = 45.5 + 2.3 * ((boy_cm / 2.54) - 60)
+    elif cinsiyet == 'E':
+        ideal_kilo = 50 + 2.3 * ((boy_cm / 2.54) - 60)
+
+    return ideal_kilo
