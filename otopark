@@ -1,0 +1,31 @@
+def main():
+    arac_turu = input("Araç türünü seçin (Otomobil/O, Kamyon/K, İş Makinası/I): ").upper()
+
+    kalma_suresi = int(input("\n\nKalma süresini saat cinsinden girin: "))
+    
+    toplam_ucret = hesapla_ucret(arac_turu, kalma_suresi)
+
+    print(f"\n\nToplam çıkış ücreti: {toplam_ucret} TL")
+
+if __name__ == "__main__":
+    main()
+
+def hesapla_ucret(arac_turu, kalma_suresi):
+    toplam_ucret = 0
+
+    if kalma_suresi <= 2:
+        if arac_turu == 'O':
+            toplam_ucret = 5
+        elif arac_turu == 'K':
+            toplam_ucret = 8
+        elif arac_turu == 'I':
+            toplam_ucret = 12
+    else:
+        if arac_turu == 'O':
+            toplam_ucret = 5 + (kalma_suresi - 2) / 10 * 1
+        elif arac_turu == 'K':
+            toplam_ucret = 8 + (kalma_suresi - 2) / 10 * 2
+        elif arac_turu == 'I':
+            toplam_ucret = 12 + (kalma_suresi - 2) / 8 * 3
+
+    return toplam_ucret
