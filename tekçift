@@ -1,0 +1,16 @@
+sayi = int(input("Bir sayı girin: "))
+tercih = input("TEK'leri mi ÇİFT'leri mi toplamak istersiniz? (TEK/ÇİFT): ").upper()
+
+toplam = 0
+
+if tercih == "TEK":
+    for i in range(1, sayi+1, 2):
+        toplam += i
+elif tercih == "ÇİFT":
+    for i in range(2, sayi+1, 2):
+        toplam += i
+else:
+    print("Geçersiz seçim!")
+    quit()
+
+print("Toplam =", toplam)
