@@ -1,0 +1,14 @@
+A = [78, 56, 23, 95, 68, 87, 61, 77, 45, 33]
+
+for i in range(len(A) - 1):
+    enbuyuk = i
+
+    for j in range(i + 1, len(A)):
+        if A[j] > A[en_buyuk_yer]:
+            enbuyuk = j
+
+    A[i], A[enbuyuk] = A[enbuyuk], A[i]
+
+    print(A[i])
+
+input("Devam etmek için bir tuşa basın...")
