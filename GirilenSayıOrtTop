@@ -1,0 +1,11 @@
+adet = int(input("Kaç adet sayı girmek istiyorsunuz? "))
+toplam = 0
+
+for i in range(1, adet + 1):
+    sayi = int(input(f"Sayı {i}: "))
+    toplam += sayi
+
+ortalama = toplam / adet
+
+print("Girilen sayıların toplamı:", toplam)
+print("Girilen sayıların ortalaması:", ortalama)
