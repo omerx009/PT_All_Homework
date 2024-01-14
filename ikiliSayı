@@ -1,0 +1,12 @@
+ikili_sayi = input("Bir ikili sayı girin: ")
+
+ondalik_deger = 0
+taban_deger = 1
+
+for i in range(len(ikili_sayi) - 1, -1, -1):
+    if ikili_sayi[i] == '1':
+        ondalik_deger += taban_deger
+    taban_deger *= 2
+
+print("Girilen Binary Sayı:", ikili_sayi)
+print("Decimal Sayı:", ondalik_deger)
