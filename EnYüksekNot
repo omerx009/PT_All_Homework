@@ -1,0 +1,15 @@
+A = ["Emin", "Emir", "İclal", "Bekir", "Cem", "Arda", "Kaan", "Metin", "Can", "Ramiz"]
+B = [56, 78, 95, 23, 95, 87, 61, 77, 45, 33]
+
+maxGrade = max(B)
+minGrade = min(B)
+
+print("En Yüksek Notu Alan Kişi/Kişiler:")
+for i in range(len(B)):
+    if B[i] == maxGrade:
+        print(A[i])
+
+print("\nEn Düşük Notu Alan Kişi/Kişiler:")
+for j in range(len(B)):
+    if B[j] == minGrade:
+        print(A[j])
