@@ -1,0 +1,26 @@
+import random
+
+isim = ["Molo", "Metta", "Massat", "Sedan", "Station", "Hatchback", "Kırmızı", "Beyaz", "Mavi"]
+
+araba = [[[random.randint(0, 10) for _ in range(3)] for _ in range(3)] for _ in range(3)]
+
+enbuyuk = -1500
+sonuc = ""
+
+# En yüksek adete sahip arabayı bul
+for m in range(3):
+    for t in range(3):
+        for r in range(3):
+            if araba[m][t][r] > enbuyuk:
+                enbuyuk = araba[m][t][r]
+                sonuc = f"{isim[m]} {isim[t + 3]} {isim[r + 6]} {enbuyuk} Adet"
+
+# En yüksek adede sahip diğer arabaları bul
+for m in range(3):
+    for t in range(3):
+        for r in range(3):
+            if araba[m][t][r] == enbuyuk and not (m == 0 and t == 3 and r == 6):
+                sonuc += f"\n{isim[m]} {isim[t + 3]} {isim[r + 6]} {enbuyuk} Adet"
+
+print("En yüksek adede sahip arabalar:")
+print(sonuc)
