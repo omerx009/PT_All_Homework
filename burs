@@ -1,0 +1,10 @@
+a = [150, 600, 700, 450, 850, 275, 950, 1500, 210, 368]
+
+for burs in a:
+    if burs < 500:
+        yeni_burs = burs * 1.1 + 50
+        print(yeni_burs)
+    else:
+        print(burs)
+
+input("DEVAM ETMEK İÇİN BİR TUŞA BASINIZ. . . ")
